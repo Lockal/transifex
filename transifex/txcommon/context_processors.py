@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.conf import settings
 from django.utils import translation
+from django.contrib.sites.models import get_current_site
 
 def site_section(request):
     """
@@ -30,7 +31,6 @@ def site_url_prefix_processor(request):
     """
     return {"SITE_URL_PREFIX" : request.build_absolute_uri("/")[:-1] }
 
-
 def bidi(request):
     """Adds to the context BiDi related variables
 
@@ -41,3 +41,9 @@ def bidi(request):
     else:
         extra_context = { 'LANGUAGE_DIRECTION':'ltr', }
     return extra_context
+
+def site_name(request):
+    """
+    Adds to the context SITE_NAME variable
+    """
+    return {"SITE_NAME" : get_current_site(request).name }

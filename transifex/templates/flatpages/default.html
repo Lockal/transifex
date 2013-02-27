@@ -3,7 +3,7 @@
 {% load markup %}
 {% load i18n %}
 
-{% block title %}{% trans "Transifex" %} | {{ flatpage.title }}{% endblock %}
+{% block title %}{{ block.super }} | {{ flatpage.title }}{% endblock %}
 
 {% block extrajs %}<script type="text/javascript" src="{% static "js/toc/generated_toc.js" %}"></script>{% endblock %}
 

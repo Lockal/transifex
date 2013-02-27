@@ -69,11 +69,11 @@ $(document).ready(function(){
 	{% blocktrans %}
 	<div class="i16 infomsg">
 		<p>To enable automatic "fetching" of your source language strings by
-		Transifex, enter a URL to your source file (e.g. POT file). Refer to
+		{{ SITE_NAME }}, enter a URL to your source file (e.g. POT file). Refer to
 		<a href="http://help.transifex.com/user-guide/projects.html#projects-and-resources">the documentation</a>
 		for more information.</p>
 
-		<p><strong>Warning</strong>: Transifex will overwrite the existing source strings
+		<p><strong>Warning</strong>: {{ SITE_NAME }} will overwrite the existing source strings
 		and translations with the ones found in the linked file. This may lead
 		to <b>loss of translations</b>, so make sure the URL links to the
 		correct file before submitting the form.
@@ -90,7 +90,7 @@ $(document).ready(function(){
     {% if perms.projects.delete_resource or is_maintainer or request.user.is_superuser %}
 
 		<div class="separate-header clearfix">
-			<h3  class="sh-label">{% trans "Delete resource from Transifex" %}</h3>
+			<h3  class="sh-label">{% blocktrans %}Delete resource from {{ SITE_NAME }}{% endblocktrans %}</h3>
 		</div>
 
     <p style="margin-bottom:1em;">{% trans "By deleting the resource your translations will be lost:" %}</p>

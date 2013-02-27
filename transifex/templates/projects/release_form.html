@@ -44,7 +44,7 @@ $(document).ready(function(){
 {% if release %}  
 	{% if perms.projects.delete_release or is_maintainer %}
 	
-	<h3>{% trans "Delete release from Transifex" %}</h3>
+	<h3>{% blocktrans %}Delete release from {{ SITE_NAME }}{% endblocktrans %}</h3>
 	<div>
 	  <a class="i16 delete buttonized buttonized_warning" rel="facebox" href="#js-delete-release-confirm">{% trans "Delete release..." %}</a>
 	</div>
