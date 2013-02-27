@@ -11,7 +11,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url languages_latest_feed %}" />
 {% endblock %}
 
-{% block content_title %}<h2 class="pagetitle">{% trans "Languages on Transifex" %} {% render_metacount language_list _("languages") %}</h2>{% endblock %}
+{% block content_title %}<h2 class="pagetitle">{% blocktrans %}Languages on {{ SITE_NAME }}{% endblocktrans %} {% render_metacount language_list _("languages") %}</h2>{% endblock %}
 
 {% block content_header_sec %}
   <a class="simlink" href="{% url languages_latest_feed %}" title="{% trans "Languages feed" %}"><img border="0" src="{% static "images/icons/feed.png" %}" />{% trans "Subscribe to feed" %}</a>

@@ -19,7 +19,7 @@
   {% if tag %}
   Showing projects tagged with: {{ tag.name }}
   {% else %}
-  {% trans "Projects on Transifex" %}
+  {% blocktrans %}Projects on {{ SITE_NAME }}{% endblocktrans %}
   {% endif %}
   {% render_metacount project_list _("projects") %}
 </h2>

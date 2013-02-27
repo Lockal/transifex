@@ -3,12 +3,12 @@
 {% load i18n %}
 {% load txcommontags %}
 
-{% block title %}{{ title }} | {% trans 'Transifex' %}{% endblock %}
+{% block title %}{{ title }} | {{ SITE_NAME }}{% endblock %}
 
 {% block extrahead %}<link media="screen" href="{% static "css/admin.css" %}" type="text/css" rel="stylesheet" />{% endblock %}
 
 {% block branding %}
-<h1 id="site-name">{% trans 'Transifex administration' %} - v{% txversion_full %}</h1>
+<h1 id="site-name">{% blocktrans %}{{ SITE_NAME }} administration{% endblocktrans %} - v{% txversion_full %}</h1>
 {% endblock %}
 
 {% block nav-global %}{% endblock %}

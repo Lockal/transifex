@@ -6,9 +6,9 @@
 {% load permissions %}
 {% load txpermissions %}
 
-{% block title %}{{ project.name }} localization | Transifex {% endblock %}
+{% block title %}{{ project.name }} localization | {{ SITE_NAME }}{% endblock %}
 
-{% block page_description %}{% blocktrans with project.name as project_name %} {{project_name}} localization project on Transifex, a modern translation workflow and crowdsourcing platform.{% endblocktrans %}{% endblock %}
+{% block page_description %}{% blocktrans with project.name as project_name %} {{project_name}} localization project on Transifex CE, a modern translation workflow and crowdsourcing platform.{% endblocktrans %}{% endblock %}
 
 {% block page_keywords %}{% blocktrans with project.name as project_name %} localization, {{ project_name }} localization, localization platform, {{ project_name }}translation, {{ project_name }} crowdsourcing {% endblocktrans %}{% endblock %}
 

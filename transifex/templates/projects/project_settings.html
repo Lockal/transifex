@@ -19,7 +19,7 @@
 {% block current_description %}
 <p class="description">
   {% if not project %}
-    {% trans "Create a new project on Transifex" %}
+    {% blocktrans %}Create a new project on {{ SITE_NAME }}{% endblocktrans %}
   {% else %}
     {% trans "Modify your project" %}
   {% endif %}

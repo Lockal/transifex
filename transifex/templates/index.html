@@ -24,14 +24,14 @@ div#content{padding-top:1em;}
 {% endblock%}
 
 {% block content_title %}
-  <h2 class="pagetitle">{% trans "Welcome to Transifex" %}</h2>
+  <h2 class="pagetitle">{% blocktrans %}Welcome to {{ SITE_NAME }}{% endblocktrans %}</h2>
 {% endblock %}
 
 {% block content_main %}
 
 
 <div id="intro" class="grid_8">
-  <p class="promo">{% trans "Transifex is a service aimed at helping translators keep track of their favorite translation projects." %}</p>
+  <p class="promo">{% blocktrans %}{{ SITE_NAME }} is using Transifex so translators can easily monitor and manage their translations.{% endblocktrans %}</p>
   <span id="ip-bottom-quote"></span>
   <div class="searchform content_header_prim">
     {% url project_list as project_list %}

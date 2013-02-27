@@ -26,7 +26,7 @@
 
                 <a href="{% url project_detail project_slug %}">{{ mproject }}</a>
                 {% if mproject.private %}
-                <img class="icon_private tipsy_enable lock" title='{% trans "This is a \"Private\" project. Private projects are accessible by specific users in Transifex." %}' src="{% static "images/icons/bullet_lock.png" %}" style="border:0;">
+                <img class="icon_private tipsy_enable lock" title='{% trans "This is a \"Private\" project. Private projects are accessible by specific users in Transifex CE." %}' src="{% static "images/icons/bullet_lock.png" %}" style="border:0;">
                 {% endif %}
 
                     <span class="attributes" style="float:right;">
